@@ -3,7 +3,7 @@
 
 
 """
-   Copyright (c) 2014, Black September
+   Copyright (c) 2014, Are Hansen
 
    All rights reserved.
  
@@ -29,7 +29,12 @@
 """
 
 
-"""Send one packet to client and spoof the source IP address. """
+"""Sends one packet to client and spoof the source IP address. """
+
+
+__author__ = 'Are Hansen'
+__date__ = '2014, April 9'
+__version__ = '0.0.1'
 
 
 import sys
@@ -38,11 +43,6 @@ import logging
 logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 from random import randint
 from scapy.all import *
-
-
-__author__ = 'Black September'
-__date__ = '2014, April 9'
-__version__ = '0.0.1'
 
 
 def parse_args():
