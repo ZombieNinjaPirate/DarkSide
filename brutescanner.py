@@ -81,7 +81,26 @@ def parse_args():
                      )
 
     ofo = parser.add_argument_group('- Offensive options')
-
+    ofo.add_argument(
+                     '-B', 
+                     dest='brute', 
+                     help='Brute force attack',
+                     choices=['ftp', 'https', 'ssh']
+                     )
+    ofo.add_argument(
+                     '-Bu', 
+                     dest='buser', 
+                     help='File containing one user name per line',
+                     type=argparse.FileType('r'),
+                     nargs='?'
+                     )
+    ofo.add_argument(
+                     '-Bp', 
+                     dest='bpass', 
+                     help='File containing password per line',
+                     type=argparse.FileType('r'),
+                     nargs='?'
+                     )
 
     args = parser.parse_args()    
     return args
